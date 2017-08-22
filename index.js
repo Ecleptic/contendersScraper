@@ -31,9 +31,6 @@ let gameDates = {
     'SEP 24': 4
 }
 
-let NATeamWins = {}
-let EUTeamWins = {}
-
 console.log("starting nightmare")
 
 nightmare
