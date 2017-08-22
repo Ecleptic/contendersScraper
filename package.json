@@ -1,0 +1,12 @@
+{
+  "name": "contendersScraperAPI",
+  "version": "1.0.0",
+  "description": "an API to continuously scrape the data from the contenders website and save it to a redis store. on request it pulls from the redis cache and uploads to the webpage",
+  "main": "index.js",
+  "author": "Cameron Green",
+  "license": "MIT",
+  "dependencies": {
+    "nightmare": "^2.10.0",
+    "redis": "^2.8.0"
+  }
+}
