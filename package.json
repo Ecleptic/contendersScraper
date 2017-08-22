@@ -6,7 +6,10 @@
   "author": "Cameron Green",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
     "nightmare": "^2.10.0",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "socket.io": "^2.0.3"
   }
 }

@@ -1,15 +1,15 @@
 const Nightmare = require('nightmare')
-const nightmare = Nightmare({
-    show: false,
-    openDevTools: false
-})
+const nightmare = Nightmare({show: false, openDevTools: false})
 const redis = require('redis')
-const client = redis.createClient() //creates a new client
+const redisClient = redis.createClient() //creates a new client
 
-client.on('connect', function () {
+redisClient.on('connect', function () {
     console.log('connected to redis')
 });
 
+redisClient.on('error', function () {
+    console.log("Error in Redis")
+})
 
 // const config = require('./config')
 
@@ -38,14 +38,60 @@ nightmare
     .goto('https://www.overwatchcontenders.com/en-us/')
     .wait('.match-schedule-ticker')
     .evaluate(() => {
-        const gamesList = ['AUG 20', 'AUG 20', 'AUG 20', 'AUG 20', 'AUG 26', 'AUG 26', 'AUG 26', 'AUG 26',
-            'AUG 27', 'AUG 27', 'AUG 27', 'AUG 27', 'SEP 1', 'SEP 1', 'Sep 2', 'Sep 2', 'Sep 2', 'Sep 2',
-            'SEP 3', 'SEP 3', 'SEP 3', 'SEP 3', 'SEP 8', 'SEP 8', 'SEP 9', 'SEP 9', 'SEP 9', 'SEP 9', 'SEP 10',
-            'SEP 10', 'SEP 10', 'SEP 10', 'SEP 15', 'SEP 15', 'SEP 16', 'SEP 16', 'SEP 16', 'SEP 16', 'SEP 17',
-            'SEP 17', 'SEP 17', 'SEP 17', 'SEP 22', 'SEP 22', 'SEP 23', 'SEP 23', 'SEP 23', 'SEP 23', 'SEP 24',
-            'SEP 24', 'SEP 24', 'SEP 24'
+        const gamesList = [
+            'AUG 20',
+            'AUG 20',
+            'AUG 20',
+            'AUG 20',
+            'AUG 26',
+            'AUG 26',
+            'AUG 26',
+            'AUG 26',
+            'AUG 27',
+            'AUG 27',
+            'AUG 27',
+            'AUG 27',
+            'SEP 1',
+            'SEP 1',
+            'Sep 2',
+            'Sep 2',
+            'Sep 2',
+            'Sep 2',
+            'SEP 3',
+            'SEP 3',
+            'SEP 3',
+            'SEP 3',
+            'SEP 8',
+            'SEP 8',
+            'SEP 9',
+            'SEP 9',
+            'SEP 9',
+            'SEP 9',
+            'SEP 10',
+            'SEP 10',
+            'SEP 10',
+            'SEP 10',
+            'SEP 15',
+            'SEP 15',
+            'SEP 16',
+            'SEP 16',
+            'SEP 16',
+            'SEP 16',
+            'SEP 17',
+            'SEP 17',
+            'SEP 17',
+            'SEP 17',
+            'SEP 22',
+            'SEP 22',
+            'SEP 23',
+            'SEP 23',
+            'SEP 23',
+            'SEP 23',
+            'SEP 24',
+            'SEP 24',
+            'SEP 24',
+            'SEP 24'
         ]
-
 
         let matchesArray = []
         matches = document.querySelectorAll('.match')
@@ -80,7 +126,8 @@ nightmare
             }
 
         }
-        // let a = matches[0].querySelector(':scope > a > .team:nth-child(1) > .team-name > .hidden-xs').innerHTML
+        // let a = matches[0].querySelector(':scope > a > .team:nth-child(1) >
+        // .team-name > .hidden-xs').innerHTML
 
         /*
                 a = document.querySelector('.match')
@@ -89,7 +136,7 @@ nightmare
                 match.team2 = a.querySelector(':scope > a > .team:nth-child(2) > .team-name > .hidden-xs').innerHTML
                 match.team1Score = a.querySelector(':scope > a > .team:nth-child(1) > .team-score').innerHTML
                 match.team2Score = a.querySelector(':scope > a > .team:nth-child(2) > .team-score').innerHTML
-                match.time = a.querySelector(':scope > a > .match-time > .moment').innerHTML.slice(0,-4) + " EST"     
+                match.time = a.querySelector(':scope > a > .match-time > .moment').innerHTML.slice(0,-4) + " EST"
         */
         /*
         function sleep(ms) {
@@ -105,13 +152,15 @@ nightmare
         demo();
         */
         return matchesArray
-    }).end()
+    })
+    .end()
     .then((contendersObject) => {
         console.log(contendersObject)
         // console.log(typeof(variable))
-        client.set("contendersObject", contendersObject.toString(), (err, reply) => {
+
+        redisClient.set("contendersObject", JSON.stringify(contendersObject), (err, reply) => {
             console.log(reply)
-            client.quit()
+            redisClient.quit()
         })
     })
     .catch((error) => {
