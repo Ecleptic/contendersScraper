@@ -92,7 +92,7 @@ nightmare
             'SEP 24',
             'SEP 24'
         ]
-
+        console.log("starting nightmare")
         let matchesArray = []
         matches = document.querySelectorAll('.match')
         for (let game in matches) {
@@ -126,31 +126,7 @@ nightmare
             }
 
         }
-        // let a = matches[0].querySelector(':scope > a > .team:nth-child(1) >
-        // .team-name > .hidden-xs').innerHTML
-
-        /*
-                a = document.querySelector('.match')
-                // team = a.querySelector(':scope > a > .team')
-                match.team1 = a.querySelector(':scope > a > .team:nth-child(1) > .team-name > .hidden-xs').innerHTML
-                match.team2 = a.querySelector(':scope > a > .team:nth-child(2) > .team-name > .hidden-xs').innerHTML
-                match.team1Score = a.querySelector(':scope > a > .team:nth-child(1) > .team-score').innerHTML
-                match.team2Score = a.querySelector(':scope > a > .team:nth-child(2) > .team-score').innerHTML
-                match.time = a.querySelector(':scope > a > .match-time > .moment').innerHTML.slice(0,-4) + " EST"
-        */
-        /*
-        function sleep(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        async function demo() {
-            console.log('Taking a break...');
-            await sleep(2000);
-            console.log('Two second later');
-        }
-
-        demo();
-        */
+       
         return matchesArray
     })
     .end()
