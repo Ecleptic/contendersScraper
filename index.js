@@ -2,10 +2,11 @@ const Nightmare = require('nightmare')
 const nightmare = Nightmare({show: false, openDevTools: false})
 const redis = require('redis')
 const redisClient = redis.createClient() //creates a new client
+const fs = require('fs')
 
 redisClient.on('connect', function () {
     console.log('connected to redis')
-});
+})
 
 redisClient.on('error', function () {
     console.log("Error in Redis")
@@ -136,6 +137,13 @@ nightmare
             console.log(reply)
             redisClient.quit()
         })
+        fs.writeFileSync("contendersObject.json", JSON.stringify(contendersObject), (err) => {
+            if (err) {
+                return console.log(err);
+            }
+
+            console.log("The file was saved!");
+        });
     })
     .catch((error) => {
         console.error('search failed:', error)
