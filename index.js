@@ -34,6 +34,8 @@ let gameDates = {
 let NATeamWins = {}
 let EUTeamWins = {}
 
+console.log("starting nightmare")
+
 nightmare
     .goto('https://www.overwatchcontenders.com/en-us/')
     .wait('.match-schedule-ticker')
@@ -92,7 +94,6 @@ nightmare
             'SEP 24',
             'SEP 24'
         ]
-        console.log("starting nightmare")
         let matchesArray = []
         matches = document.querySelectorAll('.match')
         for (let game in matches) {
@@ -126,7 +127,7 @@ nightmare
             }
 
         }
-       
+
         return matchesArray
     })
     .end()
