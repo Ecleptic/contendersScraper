@@ -1,5 +1,10 @@
 #! /usr/bin/env bash
 
+apt-get update &&\
+    apt-get install -y libgtk2.0-0 libgconf-2-4 \
+    libasound2 libxtst6 libxss1 libnss3 xvfb
+npm install segmentio/nightmare
+
 # symlink libs to where Xvfb searches
 ln -s /lib/x86_64-linux-gnu/libudev.so.1 $1/.apt/usr/lib/libudev.so.0
 ln -s /app/.apt/usr/lib/x86_64-linux-gnu/libXfont.so.1 $1/.apt/usr/lib/libXfont.so.1
