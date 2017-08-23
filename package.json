@@ -6,7 +6,6 @@
   "author": "Cameron Green",
   "license": "MIT",
   "scripts": {
-    // "heroku-prebuild": "bash ./run_me_on_compile.sh",
     "start": "node index.js"
   },
   "dependencies": {
