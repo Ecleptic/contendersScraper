@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "Cameron Green",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
