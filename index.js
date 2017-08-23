@@ -115,7 +115,7 @@ nightmare
                 let currentMatch = {
                     'Team1': team1Name,
                     'Team2': team2Name,
-                    'Team2Score': team2Name,
+                    'Team2Score': team2Score,
                     'Team1Score': team1Score,
                     'matchTime': gameTime,
                     'teamWin': teamWin,
