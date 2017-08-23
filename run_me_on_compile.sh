@@ -1,5 +1,7 @@
 #! /usr/bin/env bash
 
+docker run nightmare xvfb-run --server-args="-screen 0 1024x768x24" node index.js
+
 
 # symlink libs to where Xvfb searches
 ln -s /lib/x86_64-linux-gnu/libudev.so.1 $1/.apt/usr/lib/libudev.so.0
