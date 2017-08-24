@@ -221,7 +221,7 @@ function startScrape() {
             })
             setTimeout(() => {
                 startScrape();
-            }, 100000);
+            }, 15432);
 
         })
         .catch((error) => {
