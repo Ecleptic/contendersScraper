@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const router = express.Router() // get an instance of the express Router
 const redis = require('redis')
-const http = require('http').Server(app);
+const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
 const redisClient = redis.createClient(process.env.REDIS_URL || '//localhost:6379')
@@ -22,7 +22,7 @@ redisClient.on('error', function () {
     console.log("Error in Redis")
 })
 
-const port = process.env.PORT || 8080 // set our port
+const port = process.env.PORT || 8081 // set our port
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*')
@@ -59,7 +59,7 @@ function logIt(req, res) {
         
         res.json(reply)
     })
-};
+}
 
 function acceptIncoming(number) { //TODO: finish the PARAMS
     //TODO: finish this sucker
@@ -77,5 +77,6 @@ app.use('/api', router)
 
 // START THE SERVER
 // =============================================================================
-app.listen(port)
-console.log('Magic happens on port ' + port)
+app.listen(port,()=>{
+    console.log('Server listening on ' + port)
+})

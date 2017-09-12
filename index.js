@@ -11,7 +11,7 @@ const router = express.Router() // get an instance of the express Router
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
 const CronJob = require('cron').CronJob
-const port = process.env.PORT || 8080 // set our port
+const port = process.env.PORT || 8081 // set our port
 
 app.use(express.static(__dirname + '/public'))
 app.set('views', __dirname + '/public')
