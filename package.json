@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "body-parser": "^1.17.2",
+    "cron": "^1.2.1",
     "express": "^4.15.4",
     "nightmare": "^2.10.0",
     "redis": "^2.8.0",

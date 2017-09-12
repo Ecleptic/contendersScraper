@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'big_noodle_titling_oblique';
+    src: url(../assets/big_noodle_titling_oblique.ttf);
+    src: url(../assets/big_noodle_titling.ttf);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: big_noodle_titling_oblique, BigNoodleTitling, serif, Arial;
+    text-align: center;
+    
+}
+
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    /*border: 1px solid black;*/
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    padding: 15px;
+    background: lightgrey;
+}
+
+th {
+    border-top: 1px solid black;
+    /*border-right: 1px solid black;*/
+    border-bottom: 1px solid black;
+    /*border-left: 1px solid black;*/
+    padding: 15px;
+    background: lightgrey;
+}
+
+.blankDate {
+    border-right: 1px solid black;
+}
+
+.matchDate {
+    border-left: 1px solid black;
+}
+
+.team2>th,
+.team2>td {
+    border-bottom: 10px solid black;
+}
+.score{
+    padding-right: 1em;
+}
+
+.matchDate {
+    font-size: 3.5rem;
+    font-style: bold;
+}
+
+.name,
+.score {
+    font-size: 3.5rem;
+}
+
+h1{
+    font-size: 4rem;
+}
+.win {
+    background-color: green;
+}
