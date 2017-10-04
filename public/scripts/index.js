@@ -13,6 +13,7 @@ window.onload = () => {
     console.log('CLIENT: service worker is not supported.')
   }
   const url = "/api/API"
+  const json = "../assets/contendersObject.json"
   // let res = localStorage.getItem("contendersScheduleObject")
 
   // if (res) {
