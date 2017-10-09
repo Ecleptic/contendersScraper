@@ -95,10 +95,10 @@ redisClient.on('error', function () {
 })
 
 console.log("starting nightmare")
-new CronJob('*/2 * * * *', () => {
-    console.log('You will see this message every 2 minutes')
-    startScrape()
-}, null, true, 'America/Los_Angeles')
+// new CronJob('*/2 * * * *', () => {
+//     console.log('You will see this message every 2 minutes')
+//     // startScrape()
+// }, null, true, 'America/Los_Angeles')
 
 function startScrape() {
     nightmare
