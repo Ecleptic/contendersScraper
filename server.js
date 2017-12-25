@@ -56,7 +56,7 @@ function logIt(req, res) {
     // console.log('allowed') let payload = JSON.parse(req.query.payload)
     redisClient.get("contendersObject", (err, reply) => {
         console.log(JSON.parse(reply))
-        
+
         res.json(reply)
     })
 }

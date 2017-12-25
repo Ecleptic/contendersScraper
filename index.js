@@ -1,6 +1,6 @@
 'use strict'
 const Nightmare = require('nightmare')
-const nightmare = Nightmare({show: false, openDevTools: false})
+const nightmare = Nightmare({show: true, openDevTools: false})
 const redis = require('redis')
 const redisClient = redis.createClient(process.env.REDIS_URL || '//localhost:6379')
 const fs = require('fs')
@@ -100,6 +100,8 @@ console.log("starting nightmare")
 //     // startScrape()
 // }, null, true, 'America/Los_Angeles')
 
+startScrape()
+
 function startScrape() {
     nightmare
         .goto('https://www.overwatchcontenders.com/en-us/?skiplanding=true')
@@ -127,7 +129,6 @@ function startScrape() {
                     } else {
                         teamWin = '-'
                     }
-                    gameDate = gamesList[game]
 
                     let currentMatch = {
                         'Team1': team1Name,
@@ -135,8 +136,7 @@ function startScrape() {
                         'Team2Score': team2Score,
                         'Team1Score': team1Score,
                         'matchTime': gameTime,
-                        'teamWin': teamWin,
-                        'gameDate': gameDate
+                        'teamWin': teamWin
                     }
                     matchesArray.push(currentMatch)
                 }
