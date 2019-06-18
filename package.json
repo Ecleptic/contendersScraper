@@ -14,10 +14,10 @@
     "body-parser": "^1.18.2",
     "cron": "^1.2.1",
     "express": "^4.16.0",
-    "nightmare": "^2.10.0",
+    "nightmare": "^3.0.2",
     "redis": "^2.8.0",
     "socket.io": "^2.0.3",
-    "snyk": "^1.45.0"
+    "snyk": "^1.179.0"
   },
   "snyk": true
 }
