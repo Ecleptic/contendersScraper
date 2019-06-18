@@ -1,11 +1,56 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.13.5
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:debug:20170905':
     - nightmare > electron > extract-zip > debug:
         patched: '2017-10-24T00:14:41.173Z'
+    - nightmare > electron > electron-download > sumchecker > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - socket.io > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - socket.io > engine.io > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - socket.io > socket.io-client > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - express > finalhandler > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - socket.io > socket.io-parser > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - socket.io > socket.io-client > engine.io-client > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - socket.io > socket.io-client > socket.io-parser > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - nightmare > electron > electron-download > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - nightmare > electron > electron-download > nugget > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - nightmare > debug:
+        patched: '2019-06-18T17:06:53.605Z'
+    - nightmare > electron > extract-zip > debug:
+        patched: '2019-06-18T17:06:53.605Z'
   'npm:ms:20170412':
     - nightmare > electron > extract-zip > debug > ms:
         patched: '2017-10-24T00:14:41.173Z'
+  'npm:extend:20180424':
+    - nightmare > electron > electron-download > nugget > request > extend:
+        patched: '2019-06-18T17:06:53.605Z'
+  'npm:hoek:20180212':
+    - nightmare > electron > electron-download > nugget > request > hawk > hoek:
+        patched: '2019-06-18T17:06:53.605Z'
+    - nightmare > electron > electron-download > nugget > request > hawk > boom > hoek:
+        patched: '2019-06-18T17:06:53.605Z'
+    - nightmare > electron > electron-download > nugget > request > hawk > sntp > hoek:
+        patched: '2019-06-18T17:06:53.605Z'
+    - nightmare > electron > electron-download > nugget > request > hawk > cryptiles > boom > hoek:
+        patched: '2019-06-18T17:06:53.605Z'
+  'npm:moment:20170905':
+    - cron > moment-timezone > moment:
+        patched: '2019-06-18T17:06:53.605Z'
+  'npm:stringstream:20180511':
+    - nightmare > electron > electron-download > nugget > request > stringstream:
+        patched: '2019-06-18T17:06:53.605Z'
+  'npm:tough-cookie:20170905':
+    - nightmare > electron > electron-download > nugget > request > tough-cookie:
+        patched: '2019-06-18T17:06:53.605Z'
