@@ -54,3 +54,28 @@ patch:
   'npm:tough-cookie:20170905':
     - nightmare > electron > electron-download > nugget > request > tough-cookie:
         patched: '2019-06-18T17:06:53.605Z'
+  SNYK-JS-LODASH-450202:
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - nightmare > deep-defaults > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-04T03:19:03.412Z'
