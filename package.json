@@ -17,7 +17,7 @@
     "nightmare": "^3.0.2",
     "redis": "^2.8.0",
     "socket.io": "^2.0.3",
-    "snyk": "^1.179.0"
+    "snyk": "^1.230.5"
   },
   "snyk": true
 }
