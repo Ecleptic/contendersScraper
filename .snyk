@@ -54,3 +54,8 @@ patch:
   'npm:tough-cookie:20170905':
     - nightmare > electron > electron-download > nugget > request > tough-cookie:
         patched: '2019-06-18T17:06:53.605Z'
+  SNYK-JS-HTTPSPROXYAGENT-469131:
+    - snyk > proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T03:18:53.466Z'
+    - snyk > proxy-agent > pac-proxy-agent > https-proxy-agent:
+        patched: '2019-10-04T03:18:53.466Z'
